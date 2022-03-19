@@ -1,14 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Home from './pages/Home';
-import Navbar2 from './pages/Navbar';
+import Home from './components/Home';
+import Navbar2 from './components/Navbar';
+import Posts from './components/Repo';
 
 function App() {
   return (
     <>
       <Navbar2/>
       <Home/>
+      <Posts/>
     </>
   );
 }
