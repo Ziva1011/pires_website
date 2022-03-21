@@ -6,3 +6,17 @@
     margin-top: 10px;
     padding:15px
 }
+
+.repo-card:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+.repo-name{
+    color: black;
+    text-decoration: none;
+}
+
+.repo-name:hover{
+    color: black;
+    text-decoration: underline;
+}

@@ -1,36 +1,24 @@
 import React, { useState, useEffect } from 'react'
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
-import Button from "react-bootstrap/Button";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import "./css/repo.css";
 
+
+//Component that displays and filters the repositories
 export default function Repos (props) {
   
-  const [filterRepo, getFilterRepo] = useState([])
   const [q, setQ] = useState("");
 
-  //var filterRepo = []
   const results=props.repos.filter(
     item=>{
       return (item.name.toString().toLowerCase().includes(q.toLowerCase()))
   })
 
-  function showResults (){
-    results.map((item) => {
-      return <Card.Body>{item.name}</Card.Body>
-      })
-  }
-
   useEffect(() => {
    console.log(results)
-    /* const results=post.filter(
-      item=>{
-        return item.name.toString().toLowerCase().includes(props.query.toLowerCase())
-      })
-    getFilterRepo(results) */
   }, )
 
 
@@ -54,17 +42,11 @@ export default function Repos (props) {
             <div>{results.map((item) => {
             return(
               <Card className="repo-card"> 
-                <Card.Link href={item.html_url} target="_blank"><Card.Title>{item.name}</Card.Title></Card.Link>
+                <Card.Link className="repo-name" href={item.html_url} target="_blank"><Card.Title>{item.name}</Card.Title></Card.Link>
                 <Card.Body>{item.description}</Card.Body>
               </Card>
             )})}
           </div> 
-         {/*  <Card>
-            <div>{results.map((item) => {
-            return <p>{item.name}</p>
-            })}
-          </div> 
-          </Card> */}
         </Row>
 
   </>

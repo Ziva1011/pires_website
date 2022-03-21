@@ -1,5 +1,5 @@
 .profile-content{
-    margin-top:50px;
+    margin:50px;
 }
 
 .search-bar{
@@ -7,3 +7,35 @@
     align-items:center;
     margin: 50px;
 }
+
+.card-content{
+    padding: 20px;
+    border: 0px black;
+}
+.text-title{
+    margin-top: 20px!important;
+    align-self: center;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.user-name{
+    color: black;
+    text-decoration: none;
+    align-self: center;
+}
+
+.user-name:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.text-body{
+    align-self: center;
+}
+
+.user-img{
+    border-radius: 50%;
+    padding:10px;
+}
+
